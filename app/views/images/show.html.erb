@@ -1,3 +1,20 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @image.name %></h1>
 <p><%= image_tag @image.image_url(:show_version) %></p>
+<p>
+	<strong>
+		Average score: <%= @image.average_score %>
+	</strong>
+</p>
+<br>
+
+<h2><%= link_to 'Comments', '#', id: 'comments-link' %></h2>
+<div id="comment-section">
+	<ol id="comments">
+		<%= render @image.posts.order("created_at DESC") %>
+	</ol>
+	<% if user_signed_in? %>
+		<h3>Add a comment:</h3>
+			<%= render 'posts/form' %>		
+	<% end %>
+</div>
