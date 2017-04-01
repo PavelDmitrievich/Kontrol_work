@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'images/new'
+
+  get 'images/show'
+
+  get 'images/index'
+
   devise_for :users
   get 'users/index'
 
