@@ -7,6 +7,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+  <body >
   <nav id="top_nav" class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -34,6 +36,10 @@
 							<% end %>
 
 							<li>
+								<li><%= link_to 'My profile', user_path(current_user) %></li>
+							</li>
+
+							<li>
 								<li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 							</li>
 						</ul>
@@ -45,8 +51,9 @@
 			</div>
 		</div>
 	</nav>
+	<div class="container">
+		<%= yield %>
+	</div>
 
-  <body>
-    <%= yield %>
   </body>
 </html>

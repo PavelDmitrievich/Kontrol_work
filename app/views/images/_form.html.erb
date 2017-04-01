@@ -1,0 +1,6 @@
+<%= simple_form_for @image do |f| %>
+	<%= f.input :name, required: true, autofocus: true %>
+	<%= f.input :image, required: true, as: :file %>
+	<%= f.hidden_field :user_id, value: current_user.id %>
+	<%= f.button :submit %>
+<% end %>

@@ -1,3 +1,9 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.myText{
+    font-style: oblique;
+    color: #424242;
+    text-shadow: 3px;
+}
