@@ -1,28 +1,12 @@
 Rails.application.routes.draw do
-  get 'comments/new'
-
-  get 'comments/index'
-
-  get 'comments/show'
-
-  get 'comments/create'
-
-  get 'comments/edit'
-
-  get 'comments/update'
-
-  get 'comments/destroy'
-
-  get 'images/new'
-
-  get 'images/show'
-
-  get 'images/index'
 
   devise_for :users
-  get 'users/index'
+  resources :users, only: [:show, :index]
+  
+  resources :images do 
+    resources :comments
+  end
 
-  get 'users/show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -30,6 +30,8 @@ gem 'faker', '~> 1.7', '>= 1.7.3'
 
 gem 'bootstrap-sass'
 
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
