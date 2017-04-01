@@ -1,5 +1,5 @@
 
-<%= bootstrap_form_for [@image, @image.posts.build], :html => {:class => "form-horizontal center"}, remote: true do |f| %>
+<%= bootstrap_form_for [@image, @image.posts.build] do |f| %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div>
       <%= f.text_area :body, required: true %>
