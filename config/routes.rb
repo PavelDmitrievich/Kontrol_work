@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :users, only: [:show, :index]
   
+  root 'images#index'
+  resources :users, only: [:show, :index]
+
   resources :images do 
     resources :comments
   end
