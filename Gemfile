@@ -35,6 +35,8 @@ gem 'rmagick'
 #from admin
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'jquery-ui-rails', '~> 4.2.1'
+
+gem 'bootstrap_form'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

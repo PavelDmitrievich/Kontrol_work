@@ -10,7 +10,9 @@ class Image < ApplicationRecord
   	self.posts.each do |post|
   		@result = @result.to_f + post.rating.to_f
   	end
+
   	@score = @result / self.posts.count
   	@score = sprintf("%.2f", @score)
+  	
   end
 end

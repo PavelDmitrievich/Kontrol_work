@@ -3,7 +3,9 @@
 <p><%= image_tag @image.image_url(:show_version) %></p>
 <p>
 	<strong>
-		Average score: <%= @image.average_score %>
+		<% unless @image.posts.count == 0 %>
+			Average score: <%= @image.average_score %>
+		<% end %>
 	</strong>
 </p>
 <br>
