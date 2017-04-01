@@ -1,4 +1,4 @@
-class CommentsController < ApplicationController
+class PostsController < ApplicationController
   def new
   end
 
